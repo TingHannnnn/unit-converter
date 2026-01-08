@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrecisionConvert | Engineering Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Engineering <span>Unit Converter</span></h1>
+            <p>High-precision conversions for professional workflows.</p>
+        </header>
+
+        <main class="converter-card">
+            <div class="input-group">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="length">Length</option>
+                    <option value="mass">Mass</option>
+                    <option value="temp">Temperature</option>
+                </select>
+            </div>
+
+            <div class="conversion-grid">
+                <div class="input-group">
+                    <label for="fromUnit">From</label>
+                    <select id="fromUnit"></select>
+                    <input type="number" id="inputValue" placeholder="0.00">
+                </div>
+
+                <div class="swap-icon">⇌</div>
+
+                <div class="input-group">
+                    <label for="toUnit">To</label>
+                    <select id="toUnit"></select>
+                    <input type="number" id="outputValue" readonly placeholder="Result">
+                </div>
+            </div>
+
+            <button id="saveBtn" class="btn-primary">Save Conversion</button>
+        </main>
+
+        <section class="saved-section">
+            <h3>Recent & Saved Conversions</h3>
+            <ul id="savedList">
+                </ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
